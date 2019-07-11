@@ -22,6 +22,7 @@ public:
 	}
 
 	GS::UniString &Get() {
+		
 		return this->m_ustr;
 	}
 
@@ -29,26 +30,30 @@ private:
 	GS::UniString m_ustr;
 };
 
-void load_dg_point(py::module m) {
-	//py::class_<DG::Point> m_point(m, "Point");
-	//m_point
-	//	.def(py::init<short, short>())
-	//	.def("Set", &DG::Point::Set)
-	//	.def("SetX", &DG::Point::SetX)
-	//	.def("GetX", &DG::Point::GetX)
-	//	.def("SetY", &DG::Point::SetY)
-	//	.def("GetY", &DG::Point::GetY)
-	//	.def("Offset", &DG::Point::Offset)
-	//	.def(py::self == py::self)
-	//	.def(py::self != py::self)
-	//	;
-
+void load_cast_test(py::module m) {
 	py::class_< CastTest> c_cast(m, "CastTest");
 
 	c_cast
 		.def(py::init<GS::UniString &>())
 		.def("Get", &CastTest::Get)
 		;
+}
+
+void load_dg_point(py::module m) {
+	py::class_<DG::Point> m_point(m, "Point");
+	m_point
+		.def(py::init<short, short>())
+		.def("Set", &DG::Point::Set)
+		.def("SetX", &DG::Point::SetX)
+		.def("GetX", &DG::Point::GetX)
+		.def("SetY", &DG::Point::SetY)
+		.def("GetY", &DG::Point::GetY)
+		.def("Offset", &DG::Point::Offset)
+		.def(py::self == py::self)
+		.def(py::self != py::self)
+		;
+
+
 }
 
 PYBIND11_MODULE(ACPyModuleTutorials, m) {
@@ -61,4 +66,5 @@ PYBIND11_MODULE(ACPyModuleTutorials, m) {
 	});
 
 	load_dg_point(m);
+	load_cast_test(m);
 }
