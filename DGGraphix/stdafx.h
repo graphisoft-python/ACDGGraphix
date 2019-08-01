@@ -11,6 +11,9 @@
 // Windows 头文件
 #include <windows.h>
 
-
-
 // 在此处引用程序需要的其他标头
+#include <pybind11/pybind11.h>
+#include <pybind11/operators.h>
+#include "ACCast.h"
+
+namespace py = pybind11;

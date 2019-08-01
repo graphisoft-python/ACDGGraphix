@@ -24,15 +24,18 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="implementations\DGNativeContextFunc.hpp">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ACPyModuleTutorials.cpp">
+    <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="loadModules\DGGraphix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,6 +62,9 @@
       <Filter>libs</Filter>
     </Library>
     <Library Include="..\Support\Modules\UDLib\Win\UDImp.LIB">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="..\Support\Modules\DGGraphix\Win\DGGraphixImp.LIB">
       <Filter>libs</Filter>
     </Library>
   </ItemGroup>
