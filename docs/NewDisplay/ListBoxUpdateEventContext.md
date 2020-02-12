@@ -2,7 +2,7 @@
 
 ## Inherit
 
-* [NativeContext](XXXXXX.md)
+* [NativeContext](https://github.com/graphisoft-python/Graphix/blob/dev/docs/NewDisplay/NativeContext.md)
 
 ## Methods
 
