@@ -7,5 +7,5 @@
 ## Methods
 
 ```
-__init__(self,DGLib.UserItemUpdateEvent) -> None
+__init__(self, DGLib.UserItemUpdateEvent) -> None
 ```
